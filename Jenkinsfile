@@ -19,10 +19,10 @@ pipeline {
     stage('push'){
         steps{
             sh 'echo ||$DOCKERHUB_CREDENTIALS_PSW || docker login -u \$DOCKERHUB_CREDENTIALS_USR --password-stdin'
-            sh 'docker tag trio-task-mysql:5.7 Foxxyyyy111/mytriotasksql1:latest'
-            sh 'docker tag trio-task-flask-app Foxxyyyy111/mytriotaskflask1:latest'
-            sh "docker push Foxxyyyy111/mytriotasksql1:latest"
-            sh "docker push Foxxyyyy111/mytriotasksql1:latest"
+            sh 'docker tag trio-task-mysql:5.7 foxxyyyy/mytriotasksql1:latest'
+            sh 'docker tag trio-task-flask-app foxxyyyy/mytriotaskflask1:latest'
+            sh "docker push foxxyyyy/mytriotasksql1:latest"
+            sh "docker push foxxyyyy/mytriotasksql1:latest"
             }
         }
     }
